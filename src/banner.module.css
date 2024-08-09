@@ -1,0 +1,6 @@
+.danger{
+  background-color: tomato;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+}
