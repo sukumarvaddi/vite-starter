@@ -1,10 +1,10 @@
-import styles from "./counter.module.css"
-
-console.log(styles)
+import styles from './counter.module.css';
+import './lessy.less';
+console.log(stylesfoo);
 export const initializeCounter = (doc = globalThis.document) => {
   const countElement = doc.getElementById('count');
 
-  countElement.classList.add(styles.count)
+  countElement.classList.add(styles.count);
   const incrementButton = doc.getElementById('increment');
   const decrementButton = doc.getElementById('decrement');
 
@@ -13,15 +13,15 @@ export const initializeCounter = (doc = globalThis.document) => {
   const render = () => {
     countElement.textContent = count;
     if (count < 0) {
-      import('./banner').then(({displayBanner }) => {
-       displayBanner()
-     });
+      import('./banner').then(({ displayBanner }) => {
+        displayBanner();
+      });
     }
-    else {
-      import('./banner').then(({hideBanner }) => {
-       hideBanner()
-     });
-    }
+    // else {
+    //   import('./banner').then(({hideBanner }) => {
+    //    hideBanner()
+    //  });
+    // }
   };
 
   const increment = () => {
